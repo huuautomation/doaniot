@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src=
+"https://code.jquery.com/jquery-3.6.0.min.js">
+  </script>
+</head>
+
+<body>
+  <h1 style="color: green;">danh sách thành viên</h1>
+  <h2>nhóm 16</h2>
+  <h3>đây là:</h3>
+  <select id="animals">
+    <option value="phuc">Đoàn Hữu Phúc</option>
+    <option value="huu">Mai Trọng Hữu</option>
+    <option selected="selected" value="linh">Nguyễn Hoàng Linh</option>
+    <option value="human">Human</option>
+  </select>
+  
+<p>
+    You have selected:
+    <span id="selected"></span>
+  </p>
+
+  <p id="correct"></p>
+  <script type="text/javascript">
+function myFunction() {
+document.getElementById("myTable").deleteRow(0);
+document.getElementById("myTable").deleteRow(0);
+document.getElementById("myTable").deleteRow(0);
+  var table = document.getElementById("myTable");
+
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  cell1.innerHTML = "Nguyễn THị B";
+  cell2.innerHTML = "TĐH";
+  cell3.innerHTML = "KTĐK và TĐH";
+  
+  row = table.insertRow(0);
+  cell1 = row.insertCell(0);
+  cell2 = row.insertCell(1);
+  cell3 = row.insertCell(2);
+  cell1.innerHTML = "Nguyễn THị A";
+  cell2.innerHTML = "TĐH";
+  cell3.innerHTML = "KTĐK và TĐH";
+  
+  row = table.insertRow(0);
+  cell1 = row.insertCell(0);
+  cell2 = row.insertCell(1);
+  cell3 = row.insertCell(2);
+  cell1.innerHTML = "Họ tên";
+  cell2.innerHTML = "Khoa";
+  cell3.innerHTML = "Ngành";
+}
+</script>
+
+
+
+  <button id="submit">See result</button>
+  <script>
+    $(document).ready(function () {
+      const ans = "The correct answer is: Human";
+      let chosen = "Your answer is: ";
+      $("#submit").click(function () {
+        function myFunction() {}
+        const vals =
+          $("#animals").find(
+            "option:selected"
+          ).text();
+
+        $("#correct").text(ans);
+        $("#selected").text(vals);
+      });
+    });
+  </script>
+</body>
+
+</html>
